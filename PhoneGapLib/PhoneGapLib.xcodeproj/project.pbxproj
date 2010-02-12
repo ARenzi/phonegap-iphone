@@ -73,6 +73,8 @@
 		88BA573D109BB46F00FB5E78 /* Accelerometer.h in Headers */ = {isa = PBXBuildFile; fileRef = 88BA573B109BB46F00FB5E78 /* Accelerometer.h */; };
 		88BA573E109BB46F00FB5E78 /* Accelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BA573C109BB46F00FB5E78 /* Accelerometer.m */; };
 		AA747D9F0F9514B9006C5449 /* PhoneGapLib_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* PhoneGapLib_Prefix.pch */; };
+		EC0392B61125717300F3209E /* PhoneGapDelegateXib.h in Headers */ = {isa = PBXBuildFile; fileRef = EC0392B41125717300F3209E /* PhoneGapDelegateXib.h */; };
+		EC0392B71125717300F3209E /* PhoneGapDelegateXib.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0392B51125717300F3209E /* PhoneGapDelegateXib.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -143,6 +145,8 @@
 		88BA573C109BB46F00FB5E78 /* Accelerometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Accelerometer.m; path = Classes/Accelerometer.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* PhoneGapLib_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneGapLib_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		D2AAC07E0554694100DB518D /* libPhoneGapLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPhoneGapLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC0392B41125717300F3209E /* PhoneGapDelegateXib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhoneGapDelegateXib.h; path = Classes/PhoneGapDelegateXib.h; sourceTree = "<group>"; };
+		EC0392B51125717300F3209E /* PhoneGapDelegateXib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhoneGapDelegateXib.m; path = Classes/PhoneGapDelegateXib.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +272,8 @@
 				888700D810922FD3009987E8 /* Plugins */,
 				8887FD5A1090FBE7009987E8 /* PhoneGapDelegate.h */,
 				8887FD5B1090FBE7009987E8 /* PhoneGapDelegate.m */,
+				EC0392B41125717300F3209E /* PhoneGapDelegateXib.h */,
+				EC0392B51125717300F3209E /* PhoneGapDelegateXib.m */,
 				8887FD5C1090FBE7009987E8 /* PhoneGapViewController.h */,
 				8887FD5D1090FBE7009987E8 /* PhoneGapViewController.m */,
 			);
@@ -336,6 +342,7 @@
 				8887FD9F1090FBE7009987E8 /* Sound.h in Headers */,
 				8887FDA11090FBE7009987E8 /* UIControls.h in Headers */,
 				88BA573D109BB46F00FB5E78 /* Accelerometer.h in Headers */,
+				EC0392B61125717300F3209E /* PhoneGapDelegateXib.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +440,7 @@
 				8887FDA01090FBE7009987E8 /* Sound.m in Sources */,
 				8887FDA21090FBE7009987E8 /* UIControls.m in Sources */,
 				88BA573E109BB46F00FB5E78 /* Accelerometer.m in Sources */,
+				EC0392B71125717300F3209E /* PhoneGapDelegateXib.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
