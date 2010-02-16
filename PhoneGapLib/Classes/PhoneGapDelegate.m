@@ -98,6 +98,8 @@ static NSString *gapVersion;
 	viewController = [ [ PhoneGapViewController alloc ] init ];
 	
 	webView = [ [ UIWebView alloc ] initWithFrame:screenBounds ];
+
+        [webView setAutoresizingMask: (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight) ];
 	
 	[ viewController.view addSubview: webView ];
 	
