@@ -36,6 +36,8 @@
 	
 	// called on the delegate when we detect the stream bitrate
 	SEL didDetectBitrateSelector;
+    
+    SEL didStatusChangeSelector;
 	
 	NSURL *url;
 	BOOL isPlaying;
@@ -93,6 +95,7 @@
 @property (nonatomic, retain) NSString *streamContentType;
 @property (assign) id delegate;
 @property (assign) SEL didUpdateMetaDataSelector;
+@property (assign) SEL didStatusChangeSelector;
 @property (assign) SEL didErrorSelector;
 @property (assign) SEL didRedirectSelector;
 @property (assign) SEL didDetectBitrateSelector;

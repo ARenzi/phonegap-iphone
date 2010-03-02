@@ -391,7 +391,7 @@ void MyAudioQueueIsRunningCallback(void *inUserData, AudioQueueRef inAQ, AudioQu
 	{
 		myData->finished = true;
 		myData.isPlaying = false;
-
+        [myData.delegate performSelectorOnMainThread:myData.didStatusChangeSelector withObject:@"isStopping" waitUntilDone:YES];		
 #ifdef TARGET_OS_IPHONE			
 		AudioSessionSetActive(false);
 #endif
@@ -399,7 +399,8 @@ void MyAudioQueueIsRunningCallback(void *inUserData, AudioQueueRef inAQ, AudioQu
 	else
 	{
 		myData.isPlaying = true;
-		
+        [myData.delegate performSelectorOnMainThread:myData.didStatusChangeSelector withObject:@"isPlaying" waitUntilDone:YES];		
+
 		//
 		// Note about this bug avoidance quirk:
 		//
@@ -810,6 +811,7 @@ void ReadStreamCallBack
 @synthesize streamContentType;
 @synthesize delegate;
 @synthesize didUpdateMetaDataSelector;
+@synthesize didStatusChangeSelector;
 @synthesize didErrorSelector;
 @synthesize didRedirectSelector;
 @synthesize didDetectBitrateSelector;
@@ -828,6 +830,7 @@ void ReadStreamCallBack
 		metaDataString = [[NSMutableString alloc] initWithString:@""];
 		streamContentType = nil;
 		didUpdateMetaDataSelector = @selector(metaDataUpdated:);
+        didStatusChangeSelector = @selector(statusChanged:);
 		didErrorSelector = @selector(streamError:);
 		didRedirectSelector = @selector(streamRedirect:);
 		didDetectBitrateSelector = @selector(updateBitrate:);
@@ -1218,7 +1221,7 @@ cleanup:
 		{
 			self.isPlaying = true;
 			self.isPlaying = false;
-			finished = true;
+      		finished = true;
 		}
 	}
 }

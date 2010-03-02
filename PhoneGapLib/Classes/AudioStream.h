@@ -19,5 +19,5 @@
 - (void)play:(NSArray*)arguments withDict:(NSDictionary*)options;
 - (void)stop:(NSArray*)arguments withDict:(NSDictionary*)options;
 - (void)metaDataUpdated:(NSString *)metaData;
-
+- (void)statusChanged:(NSString *)status;
 @end

@@ -75,17 +75,15 @@
 	
 	NSURL *url = [NSURL URLWithString:escapedValue];
 	streamer = [[AudioStreamer alloc] initWithURL:url];
+    /*[streamer
+     addObserver:self
+     forKeyPath:@"isPlaying"
+     options:0
+     context:nil];
+    */
 	streamer.delegate = self;
-    [streamer setDidErrorSelector:@selector(streamError)];
     
-	/*	progressUpdateTimer =
-	 [NSTimer
-	 scheduledTimerWithTimeInterval:0.1
-	 target:self
-	 selector:@selector(updateProgress:)
-	 userInfo:nil
-	 repeats:YES];
-	 */
+	 
 /*
  [[NSNotificationCenter defaultCenter]
 	 addObserver:self
@@ -129,17 +127,20 @@
 	if ([listItems count] > 0)
 		metadata = [listItems objectAtIndex:0];
 	
-	
-	NSString * jsCallBack = [NSString stringWithFormat:@"window.plugins.AudioStream.setMetaData( %@ )",  metadata];
-    NSLog(@"%@", jsCallBack);
+    metadata = [metadata stringByReplacingOccurrencesOfString:@"'" withString:@"\\\'"];
+    
+	NSString * jsCallBack = [NSString stringWithFormat:@"window.plugins.AudioStream.setMetaData(' %@ ')",  metadata];
     
     [webView stringByEvaluatingJavaScriptFromString:jsCallBack];
-	
-	
-	NSLog(@"Foo: %@",metaData);
+
 }
 
+- (void)statusChanged:(NSString *)status;
+{
+    
+   NSString * jsCallBack = [NSString stringWithFormat:@"window.plugins.AudioStream.setStatus( '%@')",  status];
+   [webView stringByEvaluatingJavaScriptFromString:jsCallBack];
 
-
+}
 
 @end
