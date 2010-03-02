@@ -21,10 +21,6 @@
 -(PhoneGapCommand*) initWithWebView:(UIWebView*)theWebView
 {
     self = (AudioStream*)[super initWithWebView:theWebView];
-    /*if (self) 
-	{
-        tabBarItems = [[NSMutableDictionary alloc] initWithCapacity:5];
-    }*/
     return self;
 }
 
@@ -65,10 +61,6 @@
 //
 - (void)createStreamer:(NSString*)urlin
 {
-	if (streamer)
-	{
-		return;
-	}
 	
 	[self destroyStreamer];
 	
@@ -84,6 +76,8 @@
 	NSURL *url = [NSURL URLWithString:escapedValue];
 	streamer = [[AudioStreamer alloc] initWithURL:url];
 	streamer.delegate = self;
+    [streamer setDidErrorSelector:@selector(streamError)];
+    
 	/*	progressUpdateTimer =
 	 [NSTimer
 	 scheduledTimerWithTimeInterval:0.1
@@ -115,6 +109,7 @@
 
 - (void)stop:(NSArray*)arguments withDict:(NSDictionary*)options
 {
+    NSLog(@"stop");
 	[streamer stop];
 }
 
@@ -123,6 +118,11 @@
 	
 		
 	
+}
+
+- (void)streamError  
+{
+	NSLog(@"Stream Error.");
 }
 
 
