@@ -113,13 +113,6 @@
 	[streamer stop];
 }
 
-- (void)getMetaData:(NSArray*)arguments withDict:(NSDictionary*)options
-{
-	
-		
-	
-}
-
 - (void)streamError  
 {
 	NSLog(@"Stream Error.");

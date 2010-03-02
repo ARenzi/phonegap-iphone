@@ -18,7 +18,6 @@
 
 - (void)play:(NSArray*)arguments withDict:(NSDictionary*)options;
 - (void)stop:(NSArray*)arguments withDict:(NSDictionary*)options;
-- (void)getMetaData:(NSArray*)arguments withDict:(NSDictionary*)options;
 - (void)metaDataUpdated:(NSString *)metaData;
 
 @end
