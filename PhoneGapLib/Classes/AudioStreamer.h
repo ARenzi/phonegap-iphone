@@ -103,6 +103,8 @@
 - (id)initWithURL:(NSURL *)newURL;
 - (void)start;
 - (void)stop;
+- (void)mute;
+- (void)unmute;
 - (void)resetAudioQueue;
 - (void)restartAudioQueue;
 
