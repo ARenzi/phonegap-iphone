@@ -1226,5 +1226,13 @@ cleanup:
 	}
 }
 
+-(void) mute {
+	AudioQueueSetParameter(audioQueue, kAudioQueueParam_Volume, 0.0);
+}
+
+-(void) unmute {
+	AudioQueueSetParameter(audioQueue, kAudioQueueParam_Volume, 1.0);
+}
+
 @end
 

@@ -111,6 +111,18 @@
 	[streamer stop];
 }
 
+- (void)mute:(NSArray*)arguments withDict:(NSDictionary*)options
+{
+    NSLog(@"mute");
+	[streamer mute];
+}
+
+- (void)unmute:(NSArray*)arguments withDict:(NSDictionary*)options
+{
+    NSLog(@"unmute");
+	[streamer unmute];
+}
+
 - (void)streamError  
 {
 	NSLog(@"Stream Error.");
