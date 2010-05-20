@@ -18,6 +18,7 @@
 
 - (void)play:(NSArray*)arguments withDict:(NSDictionary*)options;
 - (void)stop:(NSArray*)arguments withDict:(NSDictionary*)options;
+- (void)lang:(NSArray*)arguments withDict:(NSDictionary*)options;
 - (void)mute:(NSArray*)arguments withDict:(NSDictionary*)options;
 - (void)unmute:(NSArray*)arguments withDict:(NSDictionary*)options;
 - (void)metaDataUpdated:(NSString *)metaData;
