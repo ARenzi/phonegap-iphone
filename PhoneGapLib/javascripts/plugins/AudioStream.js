@@ -25,9 +25,6 @@ AudioStream.prototype.play = function(url,metaCallBack) {
 AudioStream.prototype.stop = function() {
     PhoneGap.exec("AudioStream.stop");
 };
-AudioStream.prototype.lang = function(successCallback) {
-    PhoneGap.exec("AudioStream.lang", successCallback);
-};
 AudioStream.prototype.mute = function() {
     PhoneGap.exec("AudioStream.mute");
 };

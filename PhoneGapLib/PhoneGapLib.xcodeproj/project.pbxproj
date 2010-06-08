@@ -77,6 +77,8 @@
 		EC05FEC3112530700022DA92 /* AudioStream.m in Sources */ = {isa = PBXBuildFile; fileRef = EC05FEBF112530700022DA92 /* AudioStream.m */; };
 		EC05FEC4112530700022DA92 /* AudioStreamer.h in Headers */ = {isa = PBXBuildFile; fileRef = EC05FEC0112530700022DA92 /* AudioStreamer.h */; };
 		EC05FEC5112530700022DA92 /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC05FEC1112530700022DA92 /* AudioStreamer.m */; };
+		EC7863D311BE3A1000749E3B /* Lang.h in Headers */ = {isa = PBXBuildFile; fileRef = EC7863D111BE3A1000749E3B /* Lang.h */; };
+		EC7863D411BE3A1000749E3B /* Lang.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7863D211BE3A1000749E3B /* Lang.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -151,6 +153,8 @@
 		EC05FEBF112530700022DA92 /* AudioStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioStream.m; path = Classes/AudioStream.m; sourceTree = "<group>"; };
 		EC05FEC0112530700022DA92 /* AudioStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioStreamer.h; path = Classes/AudioStreamer.h; sourceTree = "<group>"; };
 		EC05FEC1112530700022DA92 /* AudioStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioStreamer.m; path = Classes/AudioStreamer.m; sourceTree = "<group>"; };
+		EC7863D111BE3A1000749E3B /* Lang.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Lang.h; path = Classes/Lang.h; sourceTree = "<group>"; };
+		EC7863D211BE3A1000749E3B /* Lang.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Lang.m; path = Classes/Lang.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +248,8 @@
 		888700D810922FD3009987E8 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				EC7863D111BE3A1000749E3B /* Lang.h */,
+				EC7863D211BE3A1000749E3B /* Lang.m */,
 				EC05FEBE112530700022DA92 /* AudioStream.h */,
 				EC05FEBF112530700022DA92 /* AudioStream.m */,
 				EC05FEC0112530700022DA92 /* AudioStreamer.h */,
@@ -350,6 +356,7 @@
 				EC0392B61125717300F3209E /* PhoneGapDelegateXib.h in Headers */,
 				EC05FEC2112530700022DA92 /* AudioStream.h in Headers */,
 				EC05FEC4112530700022DA92 /* AudioStreamer.h in Headers */,
+				EC7863D311BE3A1000749E3B /* Lang.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +456,7 @@
 				EC0392B71125717300F3209E /* PhoneGapDelegateXib.m in Sources */,
 				EC05FEC3112530700022DA92 /* AudioStream.m in Sources */,
 				EC05FEC5112530700022DA92 /* AudioStreamer.m in Sources */,
+				EC7863D411BE3A1000749E3B /* Lang.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,7 +508,7 @@
 					"-ObjC",
 				);
 				PREBINDING = NO;
-				SDKROOT = iphoneos3.0;
+				SDKROOT = iphonesimulator3.2;
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = "armv6 armv7";
 			};
