@@ -50,6 +50,7 @@
 
 - (id) getCommandInstance:(NSString*)className;
 - (void) javascriptAlert:(NSString*)text;
+- (void) javascriptExecute:(NSString*)text;
 - (BOOL) execute:(InvokedUrlCommand*)command;
 - (NSString*) appURLScheme;
 - (NSDictionary*) deviceProperties;

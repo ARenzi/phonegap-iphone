@@ -298,6 +298,16 @@ static NSString *gapVersion;
 	[jsString release];
 }
 
+- (void) javascriptExecute:(NSString*)text
+{
+ 	NSString* jsString = nil;
+	jsString = [[NSString alloc] initWithFormat:@"%@;", text];
+	[webView stringByEvaluatingJavaScriptFromString:jsString];
+    
+	NSLog(@"%@", jsString);
+	[jsString release];
+}   
+
 /**
  Returns the contents of the named plist bundle, loaded as a dictionary object
  */
