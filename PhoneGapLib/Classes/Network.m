@@ -31,20 +31,25 @@
 		[[Reachability sharedReachability] setHostName:hostName];
 	}
 	
-	//[[Reachability sharedReachability] setNetworkStatusNotificationsEnabled:YES];
+	NSLog(@"isReachable");
+	[[Reachability sharedReachability] setNetworkStatusNotificationsEnabled:YES];
 	[self updateReachability:callback];
     
-    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:@"kNetworkReachabilityChangedNotification" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:@"kNetworkReachabilityChangedNotification" object:nil];
 }
 
 - (void)reachabilityChanged:(NSNotification *)note
 {
+	NSLog(@"reachabilityChanged");
+
     [self updateReachability:nil];
 }
 
 - (void)updateReachability:(NSString*)callback
 {
 	NSString* jsCallback = @"navigator.network.updateReachability";
+	NSLog(@"updateReachability");
+
 	if (callback)
 		jsCallback = callback;
 	
