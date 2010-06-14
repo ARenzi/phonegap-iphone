@@ -217,6 +217,11 @@ void MyPacketsProc(				void *							inClientData,
 			 
 			// copy data to the audio queue buffer
 			AudioQueueBufferRef fillBuf = myData->audioQueueBuffer[myData->fillBufferIndex];
+            if (!fillBuf)
+			{
+				pthread_mutex_unlock(&myData->mutex2);
+				return;
+			}
 			memcpy((char*)fillBuf->mAudioData + myData->bytesFilled, (const char*)inInputData + packetOffset, packetSize);
 			
 			pthread_mutex_unlock(&myData->mutex2);
