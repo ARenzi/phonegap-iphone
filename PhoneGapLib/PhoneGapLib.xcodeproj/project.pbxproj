@@ -73,10 +73,6 @@
 		AA747D9F0F9514B9006C5449 /* PhoneGapLib_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* PhoneGapLib_Prefix.pch */; };
 		EC0392B61125717300F3209E /* PhoneGapDelegateXib.h in Headers */ = {isa = PBXBuildFile; fileRef = EC0392B41125717300F3209E /* PhoneGapDelegateXib.h */; };
 		EC0392B71125717300F3209E /* PhoneGapDelegateXib.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0392B51125717300F3209E /* PhoneGapDelegateXib.m */; };
-		EC05FEC2112530700022DA92 /* AudioStream.h in Headers */ = {isa = PBXBuildFile; fileRef = EC05FEBE112530700022DA92 /* AudioStream.h */; };
-		EC05FEC3112530700022DA92 /* AudioStream.m in Sources */ = {isa = PBXBuildFile; fileRef = EC05FEBF112530700022DA92 /* AudioStream.m */; };
-		EC05FEC4112530700022DA92 /* AudioStreamer.h in Headers */ = {isa = PBXBuildFile; fileRef = EC05FEC0112530700022DA92 /* AudioStreamer.h */; };
-		EC05FEC5112530700022DA92 /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC05FEC1112530700022DA92 /* AudioStreamer.m */; };
 		EC7863D311BE3A1000749E3B /* Lang.h in Headers */ = {isa = PBXBuildFile; fileRef = EC7863D111BE3A1000749E3B /* Lang.h */; };
 		EC7863D411BE3A1000749E3B /* Lang.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7863D211BE3A1000749E3B /* Lang.m */; };
 /* End PBXBuildFile section */
@@ -149,10 +145,6 @@
 		D2AAC07E0554694100DB518D /* libPhoneGapLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPhoneGapLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC0392B41125717300F3209E /* PhoneGapDelegateXib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhoneGapDelegateXib.h; path = Classes/PhoneGapDelegateXib.h; sourceTree = "<group>"; };
 		EC0392B51125717300F3209E /* PhoneGapDelegateXib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhoneGapDelegateXib.m; path = Classes/PhoneGapDelegateXib.m; sourceTree = "<group>"; };
-		EC05FEBE112530700022DA92 /* AudioStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioStream.h; path = Classes/AudioStream.h; sourceTree = "<group>"; };
-		EC05FEBF112530700022DA92 /* AudioStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioStream.m; path = Classes/AudioStream.m; sourceTree = "<group>"; };
-		EC05FEC0112530700022DA92 /* AudioStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioStreamer.h; path = Classes/AudioStreamer.h; sourceTree = "<group>"; };
-		EC05FEC1112530700022DA92 /* AudioStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioStreamer.m; path = Classes/AudioStreamer.m; sourceTree = "<group>"; };
 		EC7863D111BE3A1000749E3B /* Lang.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Lang.h; path = Classes/Lang.h; sourceTree = "<group>"; };
 		EC7863D211BE3A1000749E3B /* Lang.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Lang.m; path = Classes/Lang.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -250,10 +242,6 @@
 			children = (
 				EC7863D111BE3A1000749E3B /* Lang.h */,
 				EC7863D211BE3A1000749E3B /* Lang.m */,
-				EC05FEBE112530700022DA92 /* AudioStream.h */,
-				EC05FEBF112530700022DA92 /* AudioStream.m */,
-				EC05FEC0112530700022DA92 /* AudioStreamer.h */,
-				EC05FEC1112530700022DA92 /* AudioStreamer.m */,
 				8887FD621090FBE7009987E8 /* UIControls.h */,
 				8887FD631090FBE7009987E8 /* UIControls.m */,
 			);
@@ -354,8 +342,6 @@
 				8887FDA11090FBE7009987E8 /* UIControls.h in Headers */,
 				88BA573D109BB46F00FB5E78 /* Accelerometer.h in Headers */,
 				EC0392B61125717300F3209E /* PhoneGapDelegateXib.h in Headers */,
-				EC05FEC2112530700022DA92 /* AudioStream.h in Headers */,
-				EC05FEC4112530700022DA92 /* AudioStreamer.h in Headers */,
 				EC7863D311BE3A1000749E3B /* Lang.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,8 +440,6 @@
 				8887FDA21090FBE7009987E8 /* UIControls.m in Sources */,
 				88BA573E109BB46F00FB5E78 /* Accelerometer.m in Sources */,
 				EC0392B71125717300F3209E /* PhoneGapDelegateXib.m in Sources */,
-				EC05FEC3112530700022DA92 /* AudioStream.m in Sources */,
-				EC05FEC5112530700022DA92 /* AudioStreamer.m in Sources */,
 				EC7863D411BE3A1000749E3B /* Lang.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
