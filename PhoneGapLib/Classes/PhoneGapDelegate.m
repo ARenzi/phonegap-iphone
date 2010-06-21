@@ -181,7 +181,16 @@ static NSString *gapVersion;
 	 * imageView - is the Default loading screen, it stay up until the app and UIWebView (WebKit) has completly loaded.
 	 * You can change this image by swapping out the Default.png file within the resource folder.
 	 */
-	UIImage* image = [[UIImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Default" ofType:@"png"]];
+    
+
+    NSString *startupImage = [[NSBundle mainBundle] pathForResource:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"UILaunchImageFile"] ofType:@""];
+    
+    if (!startupImage) {
+        startupImage = [[NSBundle mainBundle] pathForResource:@"Default" ofType:@"png"];
+    }
+    NSLog(@"iPhone Startup %@", startupImage );
+
+    UIImage* image = [[UIImage alloc] initWithContentsOfFile: startupImage];
 	imageView = [[UIImageView alloc] initWithImage:image];
 	[image release];
 	
@@ -383,6 +392,7 @@ static NSString *gapVersion;
 - (BOOL)webView:(UIWebView *)theWebView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
 	NSURL *url = [request URL];
+   //NSLog(@"URL: %@", url);
 
     /*
      * Get Command and Options From URL
