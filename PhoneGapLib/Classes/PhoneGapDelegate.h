@@ -50,6 +50,8 @@
 
 - (id) getCommandInstance:(NSString*)className;
 - (void) javascriptAlert:(NSString*)text;
+/* This is an addition by chregu@liip.ch for calling javascript within your app
+ you can safely copy this method to your application delegate */
 - (void) javascriptExecute:(NSString*)text;
 - (BOOL) execute:(InvokedUrlCommand*)command;
 - (NSString*) appURLScheme;

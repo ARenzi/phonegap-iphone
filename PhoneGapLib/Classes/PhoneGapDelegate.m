@@ -308,6 +308,9 @@ static NSString *gapVersion;
 	[jsString release];
 }
 
+/* This is an addition by chregu@liip.ch for calling javascript within your app
+    you can safely copy this method to your application delegate */
+
 - (void) javascriptExecute:(NSString*)text
 {
  	NSString* jsString = nil;
