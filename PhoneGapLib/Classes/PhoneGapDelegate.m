@@ -228,6 +228,7 @@ static NSString *gapVersion;
  */
 - (void)webViewDidStartLoad:(UIWebView *)theWebView 
 {
+    NSLog(@"**** This is chregu's phonegap fork from http://github.com/chregu/phonegap-iphone");
 	// Play any default movie
 	NSLog(@"Going to play default movie");
 	Movie* mov = (Movie*)[self getCommandInstance:@"Movie"];
@@ -484,3 +485,4 @@ static NSString *gapVersion;
 
 
 @end
+    
