@@ -17,7 +17,7 @@ OPEN = open
 ECHO = echo
 ECHO_N = echo -n
 PG_JS_CORE = javascripts/core
-PG_JS_PLUGINS = javascripts/plugins
+
 all :: phonegap-js-core
 
 phonegap-js-core :: javascripts/phonegap.js
@@ -44,6 +44,5 @@ javascripts/phonegap.js: $(PG_JS_CORE)/phonegap.js.base $(PG_JS_CORE)/accelerati
 	$(CAT) $(PG_JS_CORE)/telephony.js >> $@
 	$(CAT) $(PG_JS_CORE)/uicontrols.js >> $@
 	$(CAT) $(PG_JS_CORE)/network.js >> $@
-	$(CAT) $(PG_JS_PLUGINS)/*.js >> $@
 	
 	
