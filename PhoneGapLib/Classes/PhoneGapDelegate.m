@@ -230,14 +230,14 @@ static NSString *gapVersion;
 {
     NSLog(@"**** This is chregu's phonegap fork from http://github.com/chregu/phonegap-iphone");
 	// Play any default movie
-	NSLog(@"Going to play default movie");
+/*	NSLog(@"Going to play default movie");
 	Movie* mov = (Movie*)[self getCommandInstance:@"Movie"];
 	NSMutableArray *args = [[[NSMutableArray alloc] init] autorelease];
 	[args addObject:@"default.mov"];
 	NSMutableDictionary* opts = [[[NSMutableDictionary alloc] init] autorelease];
 	[opts setObject:@"1" forKey:@"repeat"];
 	[mov play:args withDict:opts];
-
+*/
     // Determine the URL used to invoke this application.
     // Described in http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
 	
